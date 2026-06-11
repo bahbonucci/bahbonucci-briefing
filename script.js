@@ -1,7 +1,7 @@
 /* ===========================
    DADOS
 =========================== */
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/https://formspree.io/f/maqzpeprI'; // substituir após criar conta no Formspree
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/maqzpepr';
 
 const thermoData = [
   ['Tradicional','Moderna'],['Séria','Divertida'],['Acessível','Exclusiva'],

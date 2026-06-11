@@ -621,7 +621,6 @@ body {
   height: 100px;
   object-fit: contain;
   margin-bottom: 2rem;
-  filter: brightness(0);
 }
 
 .bb-ty-tag {

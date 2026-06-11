@@ -126,13 +126,11 @@
         <h2 class="bb-section-title">Referências visuais</h2>
         <p class="bb-section-desc">O que faz seus olhos brilharem? Marca, embalagem, post, produto de outro segmento — qualquer coisa com o clima que você quer.</p>
         <div class="bb-card">
-          <div class="bb-field">
-            <label class="bb-label">Upload de imagens <span class="bb-optional">opcional</span></label>
-            <div class="bb-upload-zone" id="ref-zone">
-              <i class="upload-icon">↑</i>
-              <div class="bb-upload-text"><strong>Clique para selecionar</strong> ou arraste aqui<br><small>Até 5 imagens — JPG, PNG, PDF</small></div>
-              <input type="file" id="ref-upload" multiple accept="image/*,.pdf" />
-            </div>
+         <div class="bb-field">
+            <label class="bb-label" for="f-reflinks">Links de referência <span class="bb-optional">opcional</span></label>
+            <textarea class="bb-input bb-textarea" id="f-reflinks" placeholder="Cole links do Pinterest, Instagram, sites... um por linha" style="min-height:70px"></textarea>
+            <p class="bb-hint">Se tiver imagens salvas no computador, sobe numa pasta do Google Drive e cola o link aqui também.</p>
+          </div>
             <div class="bb-file-list" id="ref-files"></div>
           </div>
           <div class="bb-field">
@@ -155,14 +153,10 @@
         <h2 class="bb-section-title">O que você não quer</h2>
         <p class="bb-section-desc">Às vezes é mais fácil definir o que não é a marca do que o que é.</p>
         <div class="bb-card">
-          <div class="bb-field">
-            <label class="bb-label">Upload de anti-referências <span class="bb-optional">opcional</span></label>
-            <div class="bb-upload-zone" id="anti-zone">
-              <i class="upload-icon">✕</i>
-              <div class="bb-upload-text"><strong>Clique para selecionar</strong> imagens do que você não quer<br><small>Até 5 imagens</small></div>
-              <input type="file" id="anti-upload" multiple accept="image/*,.pdf" />
-            </div>
-            <div class="bb-file-list" id="anti-files"></div>
+         <div class="bb-field">
+            <label class="bb-label" for="f-antilinks">Links de anti-referências <span class="bb-optional">opcional</span></label>
+            <textarea class="bb-input bb-textarea" id="f-antilinks" placeholder="Cole links do Pinterest, Instagram, sites... um por linha" style="min-height:70px"></textarea>
+            <p class="bb-hint">Se tiver imagens salvas no computador, sobe numa pasta do Google Drive e cola o link aqui também.</p>
           </div>
           <div class="bb-field">
             <label class="bb-label" for="f-antitexto">Estilos, climas ou marcas que você quer evitar <span class="bb-optional">opcional</span></label>

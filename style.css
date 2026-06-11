@@ -1,0 +1,695 @@
+/* ===========================
+   RESET & BASE
+=========================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Zain', sans-serif;
+  background: #F4F2ED;
+  color: #1C1C1E;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.bb-header {
+  background: #1C1C1E;
+  padding: 2.5rem 2rem 0;
+  text-align: center;
+}
+
+.bb-logo-area {
+  margin-bottom: 1.2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.bb-logo-img {
+  height: 88px;
+  width: auto;
+  max-width: 260px;
+}
+
+.bb-tagline {
+  font-family: 'Zain', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  color: rgba(156, 107, 255, 0.9);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding-bottom: 1.8rem;
+}
+
+/* ===========================
+   INTRO
+=========================== */
+.bb-intro {
+  background: #1C1C1E;
+  padding: 0 2rem 2.5rem;
+  text-align: center;
+}
+
+.bb-intro p {
+  font-family: 'Zain', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: rgba(244, 242, 237, 0.5);
+  line-height: 1.8;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.bb-divider {
+  width: 32px;
+  height: 1.5px;
+  background: #9C6BFF;
+  margin: 0 auto 1.5rem;
+}
+
+/* ===========================
+   BODY / LAYOUT
+=========================== */
+.bb-body {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 0;
+}
+
+.bb-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-sep {
+  border: none;
+  border-top: 0.5px solid rgba(28, 28, 30, 0.1);
+  margin: 2.5rem 0;
+}
+
+/* ===========================
+   SECTION LABELS / TITLES
+=========================== */
+.bb-section-label {
+  font-family: 'Zain', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #9C6BFF;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.bb-section-title {
+  font-family: 'Zain', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: #1C1C1E;
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
+}
+
+.bb-section-desc {
+  font-family: 'Zain', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+/* ===========================
+   CARD
+=========================== */
+.bb-card {
+  background: #fff;
+  border: 0.5px solid rgba(28, 28, 30, 0.12);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+/* ===========================
+   FIELDS & LABELS
+=========================== */
+.bb-field {
+  margin-bottom: 1.1rem;
+}
+.bb-field:last-child { margin-bottom: 0; }
+
+.bb-label {
+  font-family: 'Zain', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #1C1C1E;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.bb-required {
+  color: #9C6BFF;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.bb-optional {
+  display: inline-block;
+  font-family: 'Zain', sans-serif;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgba(156, 107, 255, 0.1);
+  color: #9C6BFF;
+  margin-left: 6px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  vertical-align: middle;
+}
+
+.bb-hint {
+  font-family: 'Zain', sans-serif;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 5px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+.bb-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 0.5px solid rgba(28, 28, 30, 0.2);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'Zain', sans-serif;
+  font-weight: 400;
+  background: #F4F2ED;
+  color: #1C1C1E;
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+
+.bb-input:focus { border-color: #9C6BFF; }
+.bb-input::placeholder { color: #bbb; font-weight: 300; }
+
+.bb-textarea {
+  resize: vertical;
+  min-height: 82px;
+  line-height: 1.6;
+}
+
+/* ===========================
+   CONTACT TOGGLE
+=========================== */
+.bb-contact-toggle {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.bb-toggle-btn {
+  padding: 7px 18px;
+  border: 0.5px solid rgba(28, 28, 30, 0.2);
+  border-radius: 20px;
+  font-size: 13px;
+  font-family: 'Zain', sans-serif;
+  font-weight: 400;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bb-toggle-btn.active {
+  background: #1C1C1E;
+  color: #F4F2ED;
+  border-color: #1C1C1E;
+}
+
+/* ===========================
+   TERMÔMETRO
+=========================== */
+.bb-thermo-pair {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 0;
+  border-bottom: 0.5px solid rgba(28, 28, 30, 0.06);
+}
+.bb-thermo-pair:last-child { border-bottom: none; }
+
+.bb-thermo-left {
+  font-family: 'Zain', sans-serif;
+  font-size: 13px;
+  color: #555;
+  text-align: right;
+  cursor: pointer;
+  transition: all 0.18s;
+  font-weight: 400;
+  user-select: none;
+}
+
+.bb-thermo-right {
+  font-family: 'Zain', sans-serif;
+  font-size: 13px;
+  color: #555;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.18s;
+  font-weight: 400;
+  user-select: none;
+}
+
+.bb-thermo-left.top3,
+.bb-thermo-right.top3 {
+  color: #9C6BFF;
+  font-weight: 700;
+}
+
+.bb-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+.bb-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(28, 28, 30, 0.22);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.18s;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.bb-dot.selected {
+  background: #1C1C1E;
+  border-color: #1C1C1E;
+}
+
+.bb-dot:hover:not(.selected) {
+  border-color: #9C6BFF;
+  background: rgba(156, 107, 255, 0.15);
+}
+
+/* ===========================
+   TOP 3 ATRIBUTOS
+=========================== */
+.bb-top3-area {
+  background: #fff;
+  border: 0.5px solid rgba(28, 28, 30, 0.12);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.bb-top3-title {
+  font-family: 'Zain', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1C1C1E;
+  margin-bottom: 4px;
+}
+
+.bb-top3-hint {
+  font-family: 'Zain', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.bb-top3-slots {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.bb-top3-slot {
+  padding: 7px 16px;
+  border: 0.5px solid rgba(28, 28, 30, 0.18);
+  border-radius: 20px;
+  font-family: 'Zain', sans-serif;
+  font-size: 13px;
+  color: #aaa;
+  background: #F4F2ED;
+  min-width: 90px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.bb-top3-slot.filled {
+  background: #1C1C1E;
+  color: #F4F2ED;
+  border-color: #1C1C1E;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.bb-free-attrs {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 0.5px solid rgba(28, 28, 30, 0.08);
+}
+
+.bb-free-attr-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+/* ===========================
+   UPLOAD
+=========================== */
+.bb-upload-zone {
+  border: 1px dashed rgba(28, 28, 30, 0.2);
+  border-radius: 10px;
+  padding: 1.4rem;
+  text-align: center;
+  background: #F4F2ED;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  position: relative;
+}
+
+.bb-upload-zone:hover { border-color: #9C6BFF; }
+
+.bb-upload-zone input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.upload-icon {
+  display: block;
+  font-size: 22px;
+  color: #ccc;
+  margin-bottom: 6px;
+  font-style: normal;
+}
+
+.bb-upload-text {
+  font-family: 'Zain', sans-serif;
+  font-size: 13px;
+  color: #888;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.bb-upload-text strong { font-weight: 700; color: #555; }
+.bb-upload-text small { color: #bbb; font-size: 11px; }
+
+.bb-file-list {
+  margin-top: 6px;
+  font-family: 'Zain', sans-serif;
+  font-size: 13px;
+  color: #9C6BFF;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ===========================
+   CORES INTUITIVAS
+=========================== */
+.bb-color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 10px;
+}
+
+.bb-color-swatch {
+  border-radius: 10px;
+  padding: 10px 6px 8px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.bb-color-swatch.selected {
+  border-color: #1C1C1E;
+  transform: scale(1.04);
+}
+
+.bb-swatch-block {
+  height: 36px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.bb-swatch-label {
+  font-family: 'Zain', sans-serif;
+  font-size: 11px;
+  color: #555;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+/* ===========================
+   SENSORIAL
+=========================== */
+.bb-sensorial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.bb-sensorial-item { display: flex; flex-direction: column; }
+
+.bb-sensorial-label {
+  font-family: 'Zain', sans-serif;
+  font-size: 11px;
+  color: #9C6BFF;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* ===========================
+   ESCOPO
+=========================== */
+.bb-scope-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.bb-scope-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 0.5px solid rgba(28, 28, 30, 0.15);
+  border-radius: 8px;
+  cursor: pointer;
+  background: #F4F2ED;
+  transition: all 0.2s;
+  font-family: 'Zain', sans-serif;
+  font-size: 14px;
+  color: #444;
+  font-weight: 400;
+  user-select: none;
+}
+
+.bb-scope-item.checked {
+  border-color: #9C6BFF;
+  background: rgba(156, 107, 255, 0.07);
+  color: #1C1C1E;
+}
+
+.bb-scope-item input { display: none; }
+
+.bb-scope-check {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1.5px solid rgba(28, 28, 30, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.bb-scope-item.checked .bb-scope-check {
+  background: #9C6BFF;
+  border-color: #9C6BFF;
+}
+
+.bb-scope-check-inner {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: #fff;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.bb-scope-item.checked .bb-scope-check-inner { opacity: 1; }
+
+.bb-scope-note {
+  font-family: 'Zain', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #777;
+  line-height: 1.7;
+  padding: 10px 14px;
+  background: rgba(156, 107, 255, 0.06);
+  border-radius: 8px;
+  border-left: 2px solid #9C6BFF;
+}
+
+/* ===========================
+   SUBMIT
+=========================== */
+.bb-submit-area {
+  margin-top: 3rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+.bb-submit-btn {
+  background: #1C1C1E;
+  color: #F4F2ED;
+  border: none;
+  padding: 15px 48px;
+  border-radius: 30px;
+  font-family: 'Zain', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  transition: background 0.22s;
+}
+
+.bb-submit-btn:hover { background: #9C6BFF; }
+
+.bb-accent-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #A4FF4F;
+  border-radius: 50%;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.bb-submit-note {
+  font-family: 'Zain', sans-serif;
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 12px;
+  font-weight: 300;
+}
+
+/* ===========================
+   PÁGINA DE AGRADECIMENTO
+=========================== */
+.bb-thankyou {
+  display: none;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #F4F2ED;
+}
+
+.bb-thankyou.visible { display: flex; }
+
+.bb-mono-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 2rem;
+  filter: brightness(0);
+}
+
+.bb-ty-tag {
+  font-family: 'Zain', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9C6BFF;
+  font-weight: 700;
+  display: block;
+}
+
+.bb-ty-divider {
+  width: 32px;
+  height: 1.5px;
+  background: #9C6BFF;
+  margin: 1rem auto;
+}
+
+.bb-ty-title {
+  font-family: 'Zain', sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  color: #1C1C1E;
+  margin-bottom: 0.75rem;
+}
+
+.bb-ty-sub {
+  font-family: 'Zain', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  max-width: 380px;
+  margin: 0 auto 2.5rem;
+}
+
+.bb-ty-accent {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #A4FF4F;
+  border-radius: 50%;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.bb-ty-footer {
+  font-family: 'Zain', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #bbb;
+  font-weight: 300;
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+@media (max-width: 540px) {
+  .bb-thermo-pair {
+    grid-template-columns: 72px 1fr 72px;
+    gap: 6px;
+  }
+  .bb-thermo-left, .bb-thermo-right { font-size: 11px; }
+  .bb-dot { width: 12px; height: 12px; }
+  .bb-sensorial-grid { grid-template-columns: 1fr; }
+  .bb-scope-grid { grid-template-columns: 1fr; }
+  .bb-color-grid { grid-template-columns: repeat(2, 1fr); }
+  .bb-section-title { font-size: 20px; }
+}

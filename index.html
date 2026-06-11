@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Briefing — Bah Bonucci</title>
+  <meta name="description" content="Formulário de briefing para projetos de identidade visual com Bah Bonucci." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- FORMULÁRIO -->
+  <div id="bb-form-content">
+
+    <header class="bb-header">
+      <div class="bb-logo-area">
+        <img src="assets/logo_header.svg" alt="Bah Bonucci" class="bb-logo-img" />
+      </div>
+      <p class="bb-tagline">Tradução visual de ideias com afeto e estratégia</p>
+    </header>
+
+    <div class="bb-intro">
+      <div class="bb-divider"></div>
+      <p>Esse formulário é uma extensão da nossa conversa. Responda com calma e no seu tempo — não há respostas certas. Quanto mais você compartilhar, mais preciso e afinado será o trabalho.</p>
+    </div>
+
+    <main class="bb-body">
+
+      <!-- IDENTIFICAÇÃO -->
+      <section class="bb-section">
+        <p class="bb-section-label">Antes de começar</p>
+        <h2 class="bb-section-title">Quem é você?</h2>
+        <p class="bb-section-desc">Algumas informações básicas para eu identificar seu projeto.</p>
+        <div class="bb-card">
+          <div class="bb-field">
+            <label class="bb-label" for="f-nome">Seu nome <span class="bb-required">*</span></label>
+            <input class="bb-input" id="f-nome" type="text" placeholder="Como prefere ser chamada" required />
+          </div>
+          <div class="bb-field">
+            <label class="bb-label" for="f-negocio">Nome do negócio ou projeto <span class="bb-optional">opcional</span></label>
+            <input class="bb-input" id="f-negocio" type="text" placeholder="Pode ser um nome provisório — tudo bem se ainda não tiver" />
+          </div>
+          <div class="bb-field">
+            <label class="bb-label" for="f-segmento">Segmento / área de atuação <span class="bb-required">*</span></label>
+            <input class="bb-input" id="f-segmento" type="text" placeholder="Ex: gastronomia, moda, saúde, educação..." required />
+          </div>
+          <div class="bb-field">
+            <label class="bb-label">Como prefere ser contatada? <span class="bb-required">*</span></label>
+            <div class="bb-contact-toggle">
+              <button type="button" class="bb-toggle-btn active" data-show="cf-email">E-mail</button>
+              <button type="button" class="bb-toggle-btn" data-show="cf-whats">WhatsApp</button>
+              <button type="button" class="bb-toggle-btn" data-show="cf-both">Os dois</button>
+            </div>
+            <div id="cf-email">
+              <input class="bb-input" id="f-email" type="email" placeholder="seu@email.com" />
+            </div>
+            <div id="cf-whats" style="display:none">
+              <input class="bb-input" id="f-whats" type="tel" placeholder="(11) 99999-9999" />
+            </div>
+            <div id="cf-both" style="display:none">
+              <input class="bb-input" id="f-email-b" type="email" placeholder="seu@email.com" style="margin-bottom:8px" />
+              <input class="bb-input" id="f-whats-b" type="tel" placeholder="(11) 99999-9999" />
+            </div>
+          </div>
+          <div class="bb-field">
+            <label class="bb-label" for="f-origem">Como chegou até mim? <span class="bb-optional">opcional</span></label>
+            <input class="bb-input" id="f-origem" type="text" placeholder="Indicação, Instagram, Google..." />
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-sep" />
+
+      <!-- ESSÊNCIA -->
+      <section class="bb-section">
+        <p class="bb-section-label">Seção 01</p>
+        <h2 class="bb-section-title">A essência da marca</h2>
+        <p class="bb-section-desc">Com tudo que a gente conversou fresco na cabeça, me conta um pouco mais.</p>
+        <div class="bb-card">
+          <div class="bb-field">
+            <label class="bb-label" for="f-frase">Se você tivesse que descrever sua marca em uma frase curta para uma amiga, qual seria?</label>
+            <textarea class="bb-input bb-textarea" id="f-frase" placeholder="Escreva como vier — sem filtro"></textarea>
+          </div>
+          <div class="bb-field">
+            <label class="bb-label" for="f-naoquero">O que você definitivamente <em>não</em> quer que a sua marca transmita?</label>
+            <textarea class="bb-input bb-textarea" id="f-naoquero" placeholder="Sensações, imagens ou conceitos que não têm nada a ver com você"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-sep" />
+
+      <!-- TERMÔMETRO -->
+      <section class="bb-section">
+        <p class="bb-section-label">Seção 02</p>
+        <h2 class="bb-section-title">Termômetro de atributos</h2>
+        <p class="bb-section-desc">Para cada par, clique no ponto que representa melhor onde sua marca se posiciona. Não existe meio-termo errado.</p>
+        <div class="bb-card" id="thermo-card"></div>
+        <div class="bb-top3-area">
+          <p class="bb-top3-title">Quais 3 atributos representam mais a essência da sua marca?</p>
+          <p class="bb-top3-hint">Clique no nome de um atributo acima para adicioná-lo aqui. Clique novamente para remover.</p>
+          <div class="bb-top3-slots" id="top3-display">
+            <div class="bb-top3-slot" id="slot-0">1ª escolha</div>
+            <div class="bb-top3-slot" id="slot-1">2ª escolha</div>
+            <div class="bb-top3-slot" id="slot-2">3ª escolha</div>
+          </div>
+          <div class="bb-free-attrs">
+            <label class="bb-label">Algum atributo que não estava na lista? <span class="bb-optional">opcional — até 3</span></label>
+            <div class="bb-free-attr-inputs">
+              <input class="bb-input" type="text" placeholder="Atributo livre 1" />
+              <input class="bb-input" type="text" placeholder="Atributo livre 2" />
+              <input class="bb-input" type="text" placeholder="Atributo livre 3" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-sep" />
+
+      <!-- REFERÊNCIAS -->
+      <section class="bb-section">
+        <p class="bb-section-label">Seção 03</p>
+        <h2 class="bb-section-title">Referências visuais</h2>
+        <p class="bb-section-desc">O que faz seus olhos brilharem? Marca, embalagem, post, produto de outro segmento — qualquer coisa com o clima que você quer.</p>
+        <div class="bb-card">
+          <div class="bb-field">
+            <label class="bb-label">Upload de imagens <span class="bb-optional">opcional</span></label>
+            <div class="bb-upload-zone" id="ref-zone">
+              <i class="upload-icon">↑</i>
+              <div class="bb-upload-text"><strong>Clique para selecionar</strong> ou arraste aqui<br><small>Até 5 imagens — JPG, PNG, PDF</small></div>
+              <input type="file" id="ref-upload" multiple accept="image/*,.pdf" />
+            </div>
+            <div class="bb-file-list" id="ref-files"></div>
+          </div>
+          <div class="bb-field">
+            <label class="bb-label" for="f-reflinks">Links de referência <span class="bb-optional">opcional</span></label>
+            <textarea class="bb-input bb-textarea" id="f-reflinks" placeholder="Cole links do Pinterest, Instagram, sites... um por linha" style="min-height:70px"></textarea>
+            <p class="bb-hint">Se preferir compartilhar uma pasta do Pinterest ou Google Drive com mais referências, cole o link aqui também.</p>
+          </div>
+          <div class="bb-field">
+            <label class="bb-label" for="f-refobs">Quer explicar algo sobre essas referências? <span class="bb-optional">opcional</span></label>
+            <textarea class="bb-input bb-textarea" id="f-refobs" placeholder="O que te atrai nelas — cor, clima, tipografia, qualquer detalhe"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-sep" />
+
+      <!-- ANTI-REFERÊNCIAS -->
+      <section class="bb-section">
+        <p class="bb-section-label">Seção 04</p>
+        <h2 class="bb-section-title">O que você não quer</h2>
+        <p class="bb-section-desc">Às vezes é mais fácil definir o que não é a marca do que o que é.</p>
+        <div class="bb-card">
+          <div class="bb-field">
+            <label class="bb-label">Upload de anti-referências <span class="bb-optional">opcional</span></label>
+            <div class="bb-upload-zone" id="anti-zone">
+              <i class="upload-icon">✕</i>
+              <div class="bb-upload-text"><strong>Clique para selecionar</strong> imagens do que você não quer<br><small>Até 5 imagens</small></div>
+              <input type="file" id="anti-upload" multiple accept="image/*,.pdf" />
+            </div>
+            <div class="bb-file-list" id="anti-files"></div>
+          </div>
+          <div class="bb-field">
+            <label class="bb-label" for="f-antitexto">Estilos, climas ou marcas que você quer evitar <span class="bb-optional">opcional</span></label>
+            <textarea class="bb-input bb-textarea" id="f-antitexto" placeholder="O que você olha e pensa 'não é isso'" style="min-height:70px"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-sep" />
+
+      <!-- COR INTUITIVA -->
+      <section class="bb-section">
+        <p class="bb-section-label">Seção 05</p>
+        <h2 class="bb-section-title">Cor intuitiva</h2>
+        <p class="bb-section-desc">Sem pensar muito — quais famílias de cor você sente que têm a ver com a sua marca? Pode escolher mais de uma.</p>
+        <div class="bb-card">
+          <div class="bb-color-grid" id="color-grid"></div>
+          <p class="bb-hint" style="margin-top:1rem">Isso não é uma decisão final de paleta — é uma bússola emocional para orientar o processo.</p>
+        </div>
+      </section>
+
+      <hr class="section-sep" />
+
+      <!-- SENSORIAL -->
+      <section class="bb-section">
+        <p class="bb-section-label">Seção 06 <span class="bb-optional">opcional</span></p>
+        <h2 class="bb-section-title">Se sua marca fosse...</h2>
+        <p class="bb-section-desc">Pra quem gosta de pensar fora da caixa. Pode pular se preferir — mas às vezes o que parece abstrato revela o que palavras não conseguem.</p>
+        <div class="bb-card">
+          <div class="bb-sensorial-grid">
+            <div class="bb-sensorial-item">
+              <label class="bb-sensorial-label" for="s-cheiro">um cheiro</label>
+              <input class="bb-input" id="s-cheiro" type="text" placeholder="café, terra molhada, baunilha..." />
+            </div>
+            <div class="bb-sensorial-item">
+              <label class="bb-sensorial-label" for="s-textura">uma textura</label>
+              <input class="bb-input" id="s-textura" type="text" placeholder="veludo, concreto, seda..." />
+            </div>
+            <div class="bb-sensorial-item">
+              <label class="bb-sensorial-label" for="s-musica">uma música ou som</label>
+              <input class="bb-input" id="s-musica" type="text" placeholder="artista, gênero, sensação sonora" />
+            </div>
+            <div class="bb-sensorial-item">
+              <label class="bb-sensorial-label" for="s-sabor">um sabor</label>
+              <input class="bb-input" id="s-sabor" type="text" placeholder="amargo, doce, defumado..." />
+            </div>
+          </div>
+          <div class="bb-field" style="margin-top:1rem">
+            <label class="bb-sensorial-label" for="s-lugar">um lugar</label>
+            <input class="bb-input" id="s-lugar" type="text" placeholder="um mercado na Itália, uma livraria silenciosa, uma floresta densa..." />
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-sep" />
+
+      <!-- ESCOPO -->
+      <section class="bb-section">
+        <p class="bb-section-label">Seção 07</p>
+        <h2 class="bb-section-title">O que você imagina precisar</h2>
+        <p class="bb-section-desc">Marque o que você acha importante — isso me ajuda a montar um orçamento mais preciso.</p>
+        <div class="bb-card">
+          <div class="bb-scope-grid" id="scope-grid"></div>
+          <p class="bb-scope-note">Essas escolhas são um ponto de partida, não uma lista fechada. Vou analisar o que faz sentido estratégica e visualmente para o seu projeto — e tudo pode ser adaptado ao longo do caminho.</p>
+        </div>
+      </section>
+
+      <div class="bb-submit-area">
+        <button type="button" class="bb-submit-btn" id="submit-btn">
+          Enviar briefing <span class="bb-accent-dot"></span>
+        </button>
+        <p class="bb-submit-note">Você receberá uma confirmação assim que eu receber.</p>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- PÁGINA DE AGRADECIMENTO -->
+  <div class="bb-thankyou" id="bb-thankyou">
+    <img src="assets/monograma.png" alt="Bah Bonucci monograma" class="bb-mono-img" />
+    <span class="bb-ty-tag">Briefing recebido</span>
+    <div class="bb-ty-divider"></div>
+    <h1 class="bb-ty-title">Obrigada por compartilhar!</h1>
+    <p class="bb-ty-sub">Vou analisar tudo com cuidado e entrar em contato em breve. Esse material vai ser o ponto de partida do nosso trabalho juntas.<span class="bb-ty-accent"></span></p>
+    <span class="bb-ty-footer">tradução visual de ideias com afeto e estratégia</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

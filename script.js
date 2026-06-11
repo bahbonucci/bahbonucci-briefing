@@ -144,19 +144,30 @@ function buildColors() {
 =========================== */
 function buildScope() {
   const grid = document.getElementById('scope-grid');
-  scopeItems.forEach((item, i) => {
+  scopeItems.forEach((item) => {
     const label = document.createElement('label');
     label.className = 'bb-scope-item';
-    label.innerHTML = `
-      <input type="checkbox" value="${item}" />
-      <div class="bb-scope-check"><div class="bb-scope-check-inner"></div></div>
-      <span>${item}</span>
-    `;
-    label.addEventListener('click', () => {
-      label.classList.toggle('checked');
-      if (scopeChecked.has(item)) scopeChecked.delete(item);
-      else scopeChecked.add(item);
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.value = item;
+
+    const check = document.createElement('div');
+    check.className = 'bb-scope-check';
+    check.innerHTML = '<div class="bb-scope-check-inner"></div>';
+
+    const span = document.createElement('span');
+    span.textContent = item;
+
+    checkbox.addEventListener('change', () => {
+      label.classList.toggle('checked', checkbox.checked);
+      if (checkbox.checked) scopeChecked.add(item);
+      else scopeChecked.delete(item);
     });
+
+    label.appendChild(checkbox);
+    label.appendChild(check);
+    label.appendChild(span);
     grid.appendChild(label);
   });
 }

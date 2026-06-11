@@ -17,7 +17,7 @@ body {
    HEADER
 =========================== */
 .bb-header {
-  background: #1C1C1E;
+  background: #F4F2ED;
   padding: 2.5rem 2rem 0;
   text-align: center;
 }
@@ -48,7 +48,7 @@ body {
    INTRO
 =========================== */
 .bb-intro {
-  background: #1C1C1E;
+  background: #F4F2ED;
   padding: 0 2rem 2.5rem;
   text-align: center;
 }
@@ -57,7 +57,7 @@ body {
   font-family: 'Zain', sans-serif;
   font-weight: 300;
   font-size: 15px;
-  color: rgba(244, 242, 237, 0.5);
+  color: rgba(28, 28, 30, 0.5);
   line-height: 1.8;
   max-width: 480px;
   margin: 0 auto;
